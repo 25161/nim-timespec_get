@@ -14,14 +14,15 @@ proc timespec_get*(): timespec
 ```
 
 ### Example:
+test1.nim:
 ```nim
-#test1.nim
 import timespec_get
 import os
 
-echo timespec_get()
-sleep 500
-echo timespec_get()
+var a = timespec_get()
+sleep 70
+var b = timespec_get()
+echo b.nsec - a.nsec
 ```
 
 ### License
